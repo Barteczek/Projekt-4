@@ -1,3 +1,134 @@
-// font-family: 'Montserrat', sans-serif;
-// font-family: 'Yellowtail', cursive;
-// font-family: 'Roboto Slab', serif;
+/* Variables */
+
+$font-header: 'Montserrat', sans-serif;
+$font-main: 'Roboto Slab', serif;
+
+$color-light: #ffffff;
+$color-main: #fed136;
+$color-dark: #000000;
+
+/* Global */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 14px;
+  font-family: $font-main;
+  text-align: center;
+
+}
+
+h1, h2, h3, h4 {
+  font-family: $font-header;
+  color: $color-dark;
+  
+}
+
+/* Navigation */ 
+
+nav {
+  position: absolute;
+  width: 100%;
+  top: 30px;
+  line-height: 30px;
+
+  .logo {
+  font-family: 'Yellowtail', cursive;
+  color: $color-main;
+  font-size: 28px;
+  }
+  
+  ul li {
+    display: inline;
+    list-style-type: none;
+
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 0 10px;
+      color: $color-light;
+
+      &:hover {
+        color: darken($color-light, 15);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    top: 5px;
+  }
+
+  .logo {
+    display: inline;
+  }
+
+
+  ul {
+    display: flex;
+    flex-direction: column;
+  } 
+}
+/* Header */
+
+header {
+  height: 100vh; 
+}
+
+.header-img {
+  width: 100%;
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.header-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  h1, h2 {
+    color: $color-light;
+    text-shadow: 1px 1px 5px $color-dark;
+    padding: 10px;
+  }
+
+  h1 {
+    font-family: $font-main;
+    font-size: 34px;
+    font-weight: 400;
+  }
+
+  h2 {
+    font-size: 48px;
+    text-transform: uppercase;
+  }
+
+  .btn {
+    position: absolute;
+    transform: translateX(-50%);
+    padding: 10px 15px;
+    background-color: $color-main;
+    text-decoration: none;
+    color: $color-light;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: $font-header;
+    font-weight: 700;
+    border-radius: 2px;
+  }
+}
+
+/* Services */
+
+#services {
+  height: 100vh;
+}
