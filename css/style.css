@@ -17,6 +17,36 @@ h1, h2, h3, h4 {
   color: #000000;
 }
 
+p {
+  color: #777777;
+}
+
+ul li {
+  display: inline;
+  list-style-type: none;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+section {
+  margin: 78px 0;
+  display: block;
+}
+
+.section-title {
+  font-size: 36px;
+  text-transform: uppercase;
+  margin: 15px 0;
+}
+
+.section-subtitle {
+  font-weight: 400;
+  font-family: "Roboto Slab", serif;
+  color: #777777;
+}
+
 /* Navigation */
 nav {
   position: absolute;
@@ -31,13 +61,7 @@ nav .logo {
   font-size: 28px;
 }
 
-nav ul li {
-  display: inline;
-  list-style-type: none;
-}
-
 nav ul li a {
-  text-decoration: none;
   text-transform: uppercase;
   padding: 0 10px;
   color: #ffffff;
@@ -52,13 +76,11 @@ nav ul li a:hover {
     top: 5px;
   }
   .logo {
-    display: inline;
+    display: block;
+    margin: 15px 0;
   }
-  ul {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
+  ul a {
+    font-size: 10px;
   }
 }
 
@@ -73,7 +95,11 @@ header {
 }
 
 .header-img img {
+  display: block;
   object-fit: cover;
+  height: 100vh;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .header-box {
@@ -100,6 +126,15 @@ header {
   text-transform: uppercase;
 }
 
+@media (max-width: 768px) {
+  .header-box h1 {
+    font-size: 24px;
+  }
+  .header-box h2 {
+    font-size: 36px;
+  }
+}
+
 .header-box .btn {
   position: absolute;
   transform: translateX(-50%);
@@ -115,7 +150,62 @@ header {
 }
 
 /* Services */
-#services {
-  height: 100vh;
+.services-element {
+  margin: 60px 0;
+  padding: 0 50px;
+}
+
+.services-element i {
+  color: #fed136;
+  font-size: 36px;
+  padding: 15px;
+  border: 3px solid #fed136;
+  border-radius: 50%;
+}
+
+.services-element h3 {
+  margin: 15px 0;
+}
+
+/* Portfolio */
+#portfolio {
+  background-color: #f7f7f7;
+  padding: 78px 0;
+}
+
+.card {
+  margin: 30px 0;
+}
+
+.card .card-img img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 50vh;
+}
+
+.card .card-body {
+  padding: 20px 0;
+  background-color: #ffffff;
+}
+
+/* Footer */
+footer {
+  padding-bottom: 78px;
+}
+
+footer p {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+footer ul li a i {
+  color: #ffffff;
+  background-color: #000000;
+  width: 35px;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 18px;
+  margin: 0 5px;
 }
 /*# sourceMappingURL=style.css.map */
